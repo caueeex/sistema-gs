@@ -1,0 +1,223 @@
+body {
+    background-color: #eef0f2;
+    font-size: 0.9375rem;
+}
+
+.app-navbar {
+    background-color: #0d4a2c !important;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.app-navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+    color: #fff !important;
+}
+
+.app-navbar .nav-link {
+    color: rgba(255,255,255,0.92) !important;
+    font-weight: 500;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: 4px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.app-navbar .nav-link:hover {
+    color: #fff !important;
+    background-color: rgba(255,255,255,0.12);
+}
+
+.app-navbar .nav-link.active {
+    color: #fff !important;
+    font-weight: 600;
+    background-color: rgba(255,255,255,0.18);
+}
+
+.app-navbar .navbar-user {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.875rem;
+    padding: 0.35rem 0.75rem 0.35rem 0;
+    margin-right: 0.25rem;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.app-navbar .navbar-divider {
+    display: inline-block;
+    width: 1px;
+    height: 1.5rem;
+    background-color: rgba(255,255,255,0.25);
+    margin: 0 0.5rem;
+    vertical-align: middle;
+}
+
+.app-navbar .btn-logout {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    background: transparent;
+    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.app-navbar .btn-logout:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.6);
+    color: #fff !important;
+}
+
+.app-main {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    padding: 1.75rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.page-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.page-header h1 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.filter-card {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.filter-card .card-body {
+    padding: 1rem 1.25rem;
+}
+
+.content-card {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.content-card .card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.content-card .card-body {
+    padding: 1.25rem;
+}
+
+.content-card .card-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 0.75rem 1.25rem;
+}
+
+.table-wrapper {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table-wrapper .table {
+    margin-bottom: 0;
+}
+
+.table-wrapper .table thead th {
+    background: #f8f9fa;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table-wrapper .table tbody td {
+    padding: 0.65rem 0.75rem;
+    vertical-align: middle;
+}
+
+.table-wrapper .table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid #f0f0f0;
+    white-space: nowrap;
+}
+
+.app-footer {
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    font-size: 0.8125rem;
+}
+
+.alert {
+    border-radius: 6px;
+}
+
+.btn-group-actions .btn {
+    margin-right: 0.25rem;
+}
+
+.btn-group-actions .btn:last-child {
+    margin-right: 0;
+}
+
+.dashboard-card {
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.dashboard-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #0d4a2c !important;
+}
+
+.dashboard-card:hover .text-success {
+    transform: translateX(4px);
+}
+
+.dashboard-card .text-success {
+    transition: transform 0.2s;
+}
+
+.list-group-item-action:hover {
+    background-color: #f8f9fa;
+}
+
+.product-detail-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product-detail-row:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.product-detail-row:first-child {
+    padding-top: 0;
+}
+
+.product-detail-label {
+    font-size: 0.8125rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.product-detail-value {
+    font-size: 0.9375rem;
+    color: #212529;
+}

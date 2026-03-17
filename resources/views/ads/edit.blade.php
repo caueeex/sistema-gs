@@ -3,15 +3,16 @@
 @section('title', 'Editar Anúncio')
 
 @section('content')
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="page-header d-flex justify-content-between align-items-center">
         <h1>Editar Anúncio</h1>
-        <a href="{{ route('anuncios.index') }}" class="btn btn-secondary">Voltar</a>
+        <a href="{{ route('anuncios.index') }}" class="btn btn-secondary btn-sm">Voltar</a>
     </div>
 
     <form method="POST" action="{{ route('anuncios.update', $ad) }}" id="form-ad">
         @csrf
         @method('PUT')
-        <div class="card mb-4">
+        <div class="card content-card mb-4">
+            <div class="card-header">Dados do anúncio</div>
             <div class="card-body">
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Título</label>
@@ -28,7 +29,7 @@
             </div>
         </div>
 
-        <div class="card mb-4">
+        <div class="card content-card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <span>Produtos do anúncio</span>
                 <button type="button" class="btn btn-sm btn-outline-success" id="add-product">Adicionar produto</button>
@@ -66,8 +67,8 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Atualizar</button>
-        <a href="{{ route('anuncios.index') }}" class="btn btn-link">Cancelar</a>
+        <button type="submit" class="btn btn-success btn-sm">Atualizar</button>
+        <a href="{{ route('anuncios.index') }}" class="btn btn-outline-secondary btn-sm ms-2">Cancelar</a>
     </form>
 
     @push('scripts')

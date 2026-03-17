@@ -21,7 +21,7 @@ class AuthController extends Controller
         $request->authenticate();
         $request->session()->regenerate();
 
-        return redirect()->intended(route('produtos.index'));
+        return redirect()->intended(route('dashboard'));
     }
 
     public function showRegisterForm(): View
@@ -35,7 +35,7 @@ class AuthController extends Controller
         Auth::login($user);
         $request->session()->regenerate();
 
-        return redirect()->route('produtos.index');
+        return redirect()->route('dashboard');
     }
 
     public function logout(): RedirectResponse

@@ -3,9 +3,9 @@
 @section('title', 'Novo Anúncio')
 
 @section('content')
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="page-header d-flex justify-content-between align-items-center">
         <h1>Novo Anúncio</h1>
-        <a href="{{ route('anuncios.index') }}" class="btn btn-secondary">Voltar</a>
+        <a href="{{ route('anuncios.index') }}" class="btn btn-secondary btn-sm">Voltar</a>
     </div>
 
     @if($products->isEmpty())
@@ -16,7 +16,8 @@
 
     <form method="POST" action="{{ route('anuncios.store') }}" id="form-ad" @if($products->isEmpty()) style="display:none" @endif>
         @csrf
-        <div class="card mb-4">
+        <div class="card content-card mb-4">
+            <div class="card-header">Dados do anúncio</div>
             <div class="card-body">
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Título</label>
@@ -33,7 +34,7 @@
             </div>
         </div>
 
-        <div class="card mb-4">
+        <div class="card content-card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <span>Produtos do anúncio</span>
                 <button type="button" class="btn btn-sm btn-outline-success" id="add-product">Adicionar produto</button>
@@ -68,8 +69,8 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success">Salvar</button>
-        <a href="{{ route('anuncios.index') }}" class="btn btn-link">Cancelar</a>
+        <button type="submit" class="btn btn-success btn-sm">Salvar</button>
+        <a href="{{ route('anuncios.index') }}" class="btn btn-outline-secondary btn-sm ms-2">Cancelar</a>
     </form>
 
     @push('scripts')

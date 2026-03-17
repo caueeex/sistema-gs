@@ -5,9 +5,9 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-5">
-            <div class="card shadow">
-                <div class="card-body p-4">
-                    <h2 class="card-title mb-4">Criar conta</h2>
+            <div class="card content-card">
+                <div class="card-header">Criar conta</div>
+                <div class="card-body">
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -45,9 +45,9 @@
                             <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required autocomplete="new-password">
                         </div>
 
-                        <div class="d-grid gap-2">
+                        <div class="d-grid gap-2 mt-3">
                             <button type="submit" class="btn btn-success">Registrar</button>
-                            <a href="{{ route('login') }}" class="btn btn-outline-secondary">Já tenho conta</a>
+                            <a href="{{ route('login') }}" class="btn btn-outline-secondary btn-sm">Já tenho conta</a>
                         </div>
                     </form>
                 </div>

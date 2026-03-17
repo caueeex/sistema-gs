@@ -3,12 +3,12 @@
 @section('title', 'Produtos')
 
 @section('content')
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="page-header d-flex justify-content-between align-items-center">
         <h1>Produtos</h1>
-        <a href="{{ route('produtos.create') }}" class="btn btn-success">Novo Produto</a>
+        <a href="{{ route('produtos.create') }}" class="btn btn-success btn-sm">Novo Produto</a>
     </div>
 
-    <form method="GET" class="card mb-4">
+    <form method="GET" class="card filter-card mb-4">
         <div class="card-body">
             <div class="row g-3">
                 <div class="col-md-3">
@@ -41,7 +41,7 @@
         </div>
     </form>
 
-    <div class="table-responsive">
+    <div class="table-wrapper table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -60,13 +60,15 @@
                         <td>{{ $product->cep }}</td>
                         <td>{{ $product->bairro }}</td>
                         <td>
-                            <a href="{{ route('produtos.show', $product) }}" class="btn btn-sm btn-outline-secondary">Ver</a>
-                            <a href="{{ route('produtos.edit', $product) }}" class="btn btn-sm btn-outline-success">Editar</a>
-                            <form action="{{ route('produtos.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('Excluir este produto?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-outline-danger">Excluir</button>
-                            </form>
+                            <span class="btn-group-actions d-inline-flex">
+                                <a href="{{ route('produtos.show', $product) }}" class="btn btn-sm btn-outline-secondary">Ver</a>
+                                <a href="{{ route('produtos.edit', $product) }}" class="btn btn-sm btn-outline-success">Editar</a>
+                                <form action="{{ route('produtos.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('Excluir este produto?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Excluir</button>
+                                </form>
+                            </span>
                         </td>
                     </tr>
                 @empty

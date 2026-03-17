@@ -5,9 +5,9 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-5">
-            <div class="card shadow">
-                <div class="card-body p-4">
-                    <h2 class="card-title mb-4">Entrar</h2>
+            <div class="card content-card">
+                <div class="card-header">Entrar</div>
+                <div class="card-body">
 
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -35,9 +35,9 @@
                             <label for="remember" class="form-check-label">Lembrar de mim</label>
                         </div>
 
-                        <div class="d-grid gap-2">
+                        <div class="d-grid gap-2 mt-3">
                             <button type="submit" class="btn btn-success">Entrar</button>
-                            <a href="{{ route('register') }}" class="btn btn-outline-secondary">Criar conta</a>
+                            <a href="{{ route('register') }}" class="btn btn-outline-secondary btn-sm">Criar conta</a>
                         </div>
                     </form>
                 </div>

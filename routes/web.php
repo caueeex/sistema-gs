@@ -2,12 +2,13 @@
 
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return auth()->check()
-        ? redirect()->route('produtos.index')
+        ? redirect()->route('dashboard')
         : redirect()->route('login');
 });
 
@@ -21,6 +22,7 @@ Route::middleware('guest')->group(function (): void {
 Route::post('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::middleware('auth')->group(function (): void {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('produtos', ProductController::class);
     Route::resource('anuncios', AdController::class);
 });

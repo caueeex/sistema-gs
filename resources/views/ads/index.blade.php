@@ -3,12 +3,12 @@
 @section('title', 'Anúncios')
 
 @section('content')
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="page-header d-flex justify-content-between align-items-center">
         <h1>Anúncios</h1>
-        <a href="{{ route('anuncios.create') }}" class="btn btn-success">Novo Anúncio</a>
+        <a href="{{ route('anuncios.create') }}" class="btn btn-success btn-sm">Novo Anúncio</a>
     </div>
 
-    <form method="GET" class="card mb-4">
+    <form method="GET" class="card filter-card mb-4">
         <div class="card-body">
             <div class="row g-3">
                 <div class="col-md-3">
@@ -50,7 +50,7 @@
         </div>
     </form>
 
-    <div class="table-responsive">
+    <div class="table-wrapper table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>

@@ -3,15 +3,16 @@
 @section('title', $ad->titulo)
 
 @section('content')
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="page-header d-flex justify-content-between align-items-center">
         <h1>{{ $ad->titulo }}</h1>
         <div>
-            <a href="{{ route('anuncios.edit', $ad) }}" class="btn btn-success">Editar</a>
-            <a href="{{ route('anuncios.index') }}" class="btn btn-secondary">Voltar</a>
+            <a href="{{ route('anuncios.edit', $ad) }}" class="btn btn-success btn-sm">Editar</a>
+            <a href="{{ route('anuncios.index') }}" class="btn btn-secondary btn-sm">Voltar</a>
         </div>
     </div>
 
-    <div class="card">
+    <div class="card content-card">
+        <div class="card-header">Detalhes</div>
         <div class="card-body">
             <dl class="row mb-0">
                 <dt class="col-sm-2">Descrição</dt>
@@ -38,6 +39,6 @@
     <form action="{{ route('anuncios.destroy', $ad) }}" method="POST" class="mt-3" onsubmit="return confirm('Excluir este anúncio?');">
         @csrf
         @method('DELETE')
-        <button type="submit" class="btn btn-danger">Excluir anúncio</button>
+        <button type="submit" class="btn btn-outline-danger btn-sm">Excluir anúncio</button>
     </form>
 @endsection
