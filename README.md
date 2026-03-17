@@ -27,7 +27,6 @@ Aplicação web para gestão de **Produtos** e **Anúncios** com integração a 
 - PHP 8.2+
 - Composer
 - MySQL 8+
-- Extensões PHP: pdo_mysql, mbstring, openssl, json, ctype, fileinfo
 
 ## Instalação
 
