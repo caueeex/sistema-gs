@@ -26,6 +26,9 @@
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('anuncios.*') ? 'active' : '' }}" href="{{ route('anuncios.index') }}">Anúncios</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('api.documentacao') }}" target="_blank">Documentação API</a>
+                        </li>
                     @endauth
                 </ul>
                 <ul class="navbar-nav align-items-center">
@@ -43,6 +46,9 @@
                             </form>
                         </li>
                     @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('api.documentacao') }}">Documentação API</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">Entrar</a>
                         </li>
