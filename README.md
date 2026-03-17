@@ -114,7 +114,3 @@ app/
 
 - **ViaCEP** (`https://viacep.com.br/ws/{cep}/json/`): consulta de CEP para obter o bairro ao criar/editar produto.
 - **API de autorização** (`GET https://util.devi.tools/api/v2/authorize`): verificação antes de criar ou editar produto/anúncio. Se a resposta tiver `status: "fail"`, a operação é bloqueada.
-
-## Licença
-
-MIT
